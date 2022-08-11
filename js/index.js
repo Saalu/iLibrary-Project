@@ -23,3 +23,28 @@ window.onscroll = () => {
     document.querySelector(".header .header-2").classList.remove("active");
   }
 };
+
+// ============Swiper Slide===========//
+
+var swiper = new Swiper(".books-slider", {
+  loop: true,
+  centeredSlides: true,
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    "@0.00": {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    "@0.75": {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    "@1.00": {
+      slidesPerView: 3,
+      spaceBetween: 40,
+    },
+  },
+});
